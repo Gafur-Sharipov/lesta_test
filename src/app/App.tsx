@@ -1,12 +1,12 @@
 import React from "react";
+import ApolloClientProvider from "./providers/ApolloProvider";
+import ShipPage from "@pages/ShipPages";
 
 const App: React.FC = (): JSX.Element => {
   return (
-    <div>
-      <h1>Hello, React!</h1>
-      <p>Welcome to your new React application!</p>
-      <p>This is a simple React application.</p>
-    </div>
+    <ApolloClientProvider>
+      <ShipPage />
+    </ApolloClientProvider>
   );
 };
 

@@ -14,9 +14,11 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
     alias: {
       "@app": path.resolve(__dirname, "src/app/"),
+      "@pages": path.resolve(__dirname, "src/pages/"),
+      "@widgets": path.resolve(__dirname, "src/widgets/"),
       "@features": path.resolve(__dirname, "src/features/"),
+      "@entities": path.resolve(__dirname, "src/entities/"),
       "@shared": path.resolve(__dirname, "src/shared/"),
-      "@store": path.resolve(__dirname, "src/store/"),
     },
   },
   module: {
@@ -36,7 +38,19 @@ module.exports = {
         },
       },
       {
+        test: /\.module\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: { modules: true }, // Поддержка CSS-модулей
+          },
+          "postcss-loader",
+        ],
+      },
+      {
         test: /\.css$/,
+        exclude: /\.module\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
       {

@@ -1,22 +1,27 @@
 {
-    "compilerOptions": {
-      "target": "ESNext",
-      "module": "ESNext",
-      "moduleResolution": "Node",
-      "strict": true,
-      "jsx": "react-jsx",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "baseUrl": "./src",
-      "paths": {
-        "@app/*": ["app/*"],
-        "@features/*": ["features/*"],
-        "@shared/*": ["shared/*"],
-        "@store/*": ["store/*"]
-      }
-    },
-    "include": ["src"],
-    "exclude": ["node_modules", "dist"]
-  }
-  
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@features/*": ["features/*"],
+      "@shared/*": ["shared/*"],
+      "@store/*": ["store/*"],
+      "@entities/*": ["entities/*"],
+      "@widgets/*": ["widgets/*"],
+      "@components/*": ["components/*"],
+      "@utils/*": ["utils/*"],
+      "@services/*": ["services/*"],
+      "@pages/*": ["pages/*"]
+    }
+  },
+  "include": ["src", "global.d.ts" ],
+  "exclude": ["node_modules", "dist"]
+}
