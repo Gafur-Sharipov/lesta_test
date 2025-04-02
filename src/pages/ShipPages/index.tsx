@@ -1,5 +1,6 @@
-import React from "react";
 import ShipList from "@widgets/ShipList/ui/ShipList";
+import React from "react";
+
 
 const ShipPage: React.FC = () => {
   return (
